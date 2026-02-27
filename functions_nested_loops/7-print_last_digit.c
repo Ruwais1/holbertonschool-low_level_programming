@@ -12,7 +12,6 @@ int print_last_digit(int n)
 
 	last = n % 10;
 
-	/* إذا كان الرقم سالباً، حوله إلى موجب ليُطبع ويُعاد بشكل صحيح */
 	if (last < 0)
 	{
 		last = last * -1;
