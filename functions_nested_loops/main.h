@@ -2,6 +2,9 @@
 #define MAIN_H
 
 int _putchar(char c);
+/* ... الدوال السابقة ... */
+int add(int, int);
+int _putchar(char c);
 int _islower(int c);
 int _isalpha(int c);
 int print_sign(int n);
