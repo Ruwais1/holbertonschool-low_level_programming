@@ -10,16 +10,13 @@ int main(void)
 	int count;
 	long f1 = 1, f2 = 2, next;
 
-	/* طباعة أول رقمين يدوياً لبدء السلسلة */
 	printf("%ld, %ld", f1, f2);
 
-	/* بدأنا برقمين، لذا نحتاج لـ 48 رقماً إضافياً */
 	for (count = 3; count <= 50; count++)
 	{
 		next = f1 + f2;
 		printf(", %ld", next);
 
-		/* تحديث القيم للخطوة القادمة */
 		f1 = f2;
 		f2 = next;
 	}
