@@ -8,7 +8,6 @@ void print_number(int n)
 {
 	unsigned int n1;
 
-	/* التعامل مع الأرقام السالبة */
 	if (n < 0)
 	{
 		_putchar('-');
@@ -19,12 +18,10 @@ void print_number(int n)
 		n1 = n;
 	}
 
-	/* الاستدعاء الذاتي للوصول لأول خانة من اليسار */
 	if (n1 / 10)
 	{
 		print_number(n1 / 10);
 	}
 
-	/* طباعة الخانة الأخيرة (الآحاد) */
 	_putchar((n1 % 10) + '0');
 }
