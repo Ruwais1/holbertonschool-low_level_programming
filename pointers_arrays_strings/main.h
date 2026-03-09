@@ -27,6 +27,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r);
 void print_buffer(char *b, int size);
 char *_strchr(char *s, char c);
 char *_strchr(char *s, char c);
+unsigned int _strspn(char *s, char *accept);
 
 /* New Prototype for Task 0 - Project 2 */
 char *_memset(char *s, char b, unsigned int n);
