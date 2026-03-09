@@ -32,5 +32,6 @@ char *_strpbrk(char *s, char *accept);
 char *_strstr(char *haystack, char *needle);
 /* New Prototype for Task 0 - Project 2 */
 char *_memset(char *s, char b, unsigned int n);
+void print_chessboard(char (*a)[8]);
 
 #endif
