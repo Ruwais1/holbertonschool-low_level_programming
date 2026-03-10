@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 				return (1);
 			}
 		}
-		
+
 		/* Convert the string to integer and add to sum */
 		sum += atoi(argv[i]);
 	}
