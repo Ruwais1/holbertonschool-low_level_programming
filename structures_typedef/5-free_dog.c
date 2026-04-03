@@ -12,11 +12,8 @@ void free_dog(dog_t *d)
 {
 	if (d != NULL)
 	{
-		/* Free the allocated copies of name and owner first */
 		free(d->name);
 		free(d->owner);
-		
-		/* Finally, free the struct itself */
 		free(d);
 	}
 }
