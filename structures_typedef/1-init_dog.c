@@ -12,10 +12,9 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	/* 1. Check if the pointer is valid to avoid segfaults */
+	/* Check if the pointer is valid before assigning values */
 	if (d != NULL)
 	{
-		/* 2. Use -> operator to assign values through the pointer */
 		d->name = name;
 		d->age = age;
 		d->owner = owner;
