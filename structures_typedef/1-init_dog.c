@@ -8,11 +8,12 @@
  * @age: age to initialize
  * @owner: owner to initialize
  *
- * Description: This function initializes the members of a struct dog.
+ * Description: This function assigns values to the members of a struct dog
+ * through a pointer. It includes a safety check for NULL pointers.
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	/* Check if the pointer is valid before assigning values */
+	/* Safety check: ensure the pointer d is not NULL */
 	if (d != NULL)
 	{
 		d->name = name;
