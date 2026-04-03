@@ -1,12 +1,11 @@
 #include <stdlib.h>
-#include <stdio.h>
 
 int _putchar(char c);
 
 /**
  * is_digit - checks if a string contains only digits
  * @s: string to check
- * Return: 1 if all digits, 0 otherwise
+ * Return: 1 if all digits, 0 otherwise or if empty
  */
 int is_digit(char *s)
 {
@@ -18,6 +17,10 @@ int is_digit(char *s)
 			return (0);
 		i++;
 	}
+	/* If string was empty, return 0 */
+	if (i == 0)
+		return (0);
+	
 	return (1);
 }
 
@@ -36,6 +39,24 @@ int _strlen(char *s)
 }
 
 /**
+ * errors - prints Error and exits
+ * This avoids printf memory leaks!
+ */
+void errors(void)
+{
+	char *err = "Error";
+	int i = 0;
+
+	while (err[i])
+	{
+		_putchar(err[i]);
+		i++;
+	}
+	_putchar('\n');
+	exit(98);
+}
+
+/**
  * main - multiplies two positive numbers
  * @argc: number of arguments
  * @argv: array of arguments
@@ -46,18 +67,16 @@ int main(int argc, char *argv[])
 	char *s1, *s2;
 	int len1, len2, len, i, carry, d1, d2, *res, a = 0;
 
-	/* 1. Check arguments BEFORE malloc to avoid leaks */
+	/* Check arguments safely before allocating ANY memory */
 	if (argc != 3 || !is_digit(argv[1]) || !is_digit(argv[2]))
-	{
-		printf("Error\n");
-		exit(98);
-	}
+		errors();
 
 	s1 = argv[1];
 	s2 = argv[2];
 	len1 = _strlen(s1);
 	len2 = _strlen(s2);
 	len = len1 + len2;
+
 	res = malloc(sizeof(int) * len);
 	if (!res)
 		return (1);
