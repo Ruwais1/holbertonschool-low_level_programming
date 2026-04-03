@@ -1,6 +1,9 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-void *malloc_checked(unsigned int b);
+int _putchar(char c);
+int is_digit(char *s);
+int _strlen(char *s);
+void errors(void);
 
-#endif
+#endif /* MAIN_H */
