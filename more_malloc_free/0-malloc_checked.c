@@ -5,16 +5,16 @@
  * @b: number of bytes to allocate.
  *
  * Return: a pointer to the allocated memory.
- * If malloc fails, causes normal process termination with a status value of 98.
+ * If malloc fails, causes process termination with status 98.
  */
 void *malloc_checked(unsigned int b)
 {
 	void *ptr;
 
-	/* Attempt to allocate memory using malloc */
+	/* Attempt to allocate memory */
 	ptr = malloc(b);
 
-	/* Check if the allocation failed (returned NULL) */
+	/* Check if the allocation failed */
 	if (ptr == NULL)
 	{
 		/* Terminate the process with status code 98 */
