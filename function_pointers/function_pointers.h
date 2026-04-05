@@ -1,7 +1,17 @@
-#ifndef FUNCTION_POINTERS_H
-#define FUNCTION_POINTERS_H
+#include "function_pointers.h"
+#include <stdlib.h>
 
-/* Prototype for the function that prints a name */
-void print_name(char *name, void (*f)(char *));
-
-#endif
+/**
+ * print_name - prints a name using a function pointer
+ * @name: name of the person to be printed
+ * @f: pointer to the function that defines the printing format
+ *
+ * Return: Nothing.
+ */
+void print_name(char *name, void (*f)(char *))
+{
+	if (name != NULL && f != NULL)
+	{
+		f(name);
+	}
+}
