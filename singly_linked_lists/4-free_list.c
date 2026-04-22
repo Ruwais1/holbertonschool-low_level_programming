@@ -15,11 +15,11 @@ void free_list(list_t *head)
 	{
 		temp = head;
 		head = head->next;
-		
+
 		/* Free the duplicated string first */
 		if (temp->str != NULL)
 			free(temp->str);
-			
+
 		/* Then free the node itself */
 		free(temp);
 	}
