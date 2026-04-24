@@ -134,32 +134,17 @@ void print_osabi(unsigned char *e_ident)
 	case ELFOSABI_NONE:
 		printf("UNIX - System V\n");
 		break;
-	case ELFOSABI_HPUX:
-		printf("UNIX - HP-UX\n");
-		break;
 	case ELFOSABI_NETBSD:
 		printf("UNIX - NetBSD\n");
-		break;
-	case ELFOSABI_LINUX:
-		printf("UNIX - Linux\n");
 		break;
 	case ELFOSABI_SOLARIS:
 		printf("UNIX - Solaris\n");
 		break;
-	case ELFOSABI_IRIX:
-		printf("UNIX - IRIX\n");
+	case ELFOSABI_LINUX:
+		printf("UNIX - Linux\n");
 		break;
 	case ELFOSABI_FREEBSD:
 		printf("UNIX - FreeBSD\n");
-		break;
-	case ELFOSABI_TRU64:
-		printf("UNIX - TRU64\n");
-		break;
-	case ELFOSABI_ARM:
-		printf("ARM\n");
-		break;
-	case ELFOSABI_STANDALONE:
-		printf("Standalone App\n");
 		break;
 	default:
 		printf("<unknown: %x>\n", e_ident[EI_OSABI]);
@@ -244,7 +229,7 @@ void close_elf(int elf)
 }
 
 /**
- * main - Displays information contained in the ELF header at the start of file.
+ * main - Displays information contained in the ELF header at start of file.
  * @argc: The number of arguments supplied to the program.
  * @argv: An array of pointers to the arguments.
  *
