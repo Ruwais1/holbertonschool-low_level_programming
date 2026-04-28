@@ -3,7 +3,7 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_set - Adds or updates an element 
+ * hash_table_set -  
  * @ht: Hash table
  * @key: Key to add or update
  * @value: Value associated with key
